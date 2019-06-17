@@ -1,5 +1,6 @@
-# COMP3200 Latex Report Template
+# COMP3200 LaTeX Report Template
 
+This template produces a 'pretty good' report, compliant with the COMP3200 report standard at the University of Southampton.
 
 I've compiled it on a Linux machine using the 2017, 2018, and 2019 distributions
 of texlive and it works fine.
@@ -22,12 +23,6 @@ machine, or aren't using Linux, then [Overleaf](https://www.overleaf.com/) has
 been widely recommended to me by peers for preparing latex documents. I've found
 it to be mostly acceptable, if a little slow at times.
 
-# Licensing
-
 I've done my best to make this compliant with the relevant university standards
 at the time I wrote this template for my own degree (2018).
-
-This template is available for all to freely use, under no licence and is
-provided without warranty. To my knowledge there's nothing here to violate
-academic integrity rules, but all responsibility is left to the user.
 
