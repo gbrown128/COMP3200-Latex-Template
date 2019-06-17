@@ -1,0 +1,150 @@
+\documentclass[12pt]{book}
+
+% Template setup: Title and Author
+\newcommand{\docTitle}{COMP3200 Project Report}
+\newcommand{\docSubtitle}{Project Title} 
+\newcommand{\docAuthor}{Authour}
+\newcommand{\docSupervisor}{Supervisor}
+\newcommand{\docSecondExaminer}{Second Examiner}
+\newcommand{\docDegree}{MEng Electronic Engineering}
+
+% Page Setup 
+% Inch (25.4mm) margin is just above spec'd 24mm.
+% 10mm offset gives 35.4mm margin on first page, again just above spec.
+\usepackage[a4paper, twoside, bindingoffset=10mm, margin=1in]{geometry}
+
+% ISO Format date
+\usepackage{datetime2}
+% Date format.
+% I use YYYY-MM-DD because I prefer it.
+\DTMsetdatestyle{iso}
+% Alternatively there's the more normal UK approach:
+%\DTMsetdatestyle{ddmmyyyy}
+
+% Set up the PDF info and the title.
+\usepackage{hyperref}
+\hypersetup{
+    unicode=true,
+    pdftitle={\docTitle{}: \docSubtitle{}},
+    pdfauthor={\docAuthor{}}
+}
+
+% Document Title
+\title{\docTitle{}}
+\author{\docAuthor}
+\date{\today}
+
+%% General Stuff
+% Don't indent paragraphs, but use a smaller newline between them.
+\usepackage{parskip}
+% The appendix environment.
+\usepackage{appendix}
+% Nth for quick superscripts.
+%\usepackage[super]{nth}
+% siunitx provides nice SI approved units formatting and digit grouping.
+%\usepackage{siunitx}
+% Booktabs for nicer tables and such 
+%\usepackage{booktabs}
+% Fraction with diagonal lines. Useful inline with text.
+%\usepackage{nicefrac}
+
+%% Figures and Figure Placement
+% Import images.
+\usepackage{graphicx}
+% Float environments for figures.
+\usepackage{float}
+% To enable subfigures.
+%\usepackage{subcaption}
+% Figures with text besides it.
+%\usepackage{wrapfig}
+% Sometimes useful to insert full PDF pages into documents.
+%\usepackage{pdfpages}
+
+
+%% Report Specific Things
+% Gantt Charts
+\usepackage{pgfgantt}
+% Directory tress for appendicies.
+\usepackage{dirtree}
+
+%% Misc things
+% Amsmath for the pretty align* environment.
+%\usepackage{amsmath, amssymb}
+% Circuit diagrams.
+%\usepackage[european, cuteinductors]{circuitikz}
+% Minted for code 
+%\usepackage{minted}
+
+% The abstract environment pulled from report.cls
+% Seems to have been done following this stack exchange post:
+% https://tex.stackexchange.com/questions/68222
+\newcommand\abstractname{Abstract}
+\makeatletter
+\newenvironment{abstract}{
+        \small
+        \begin{center}
+          {\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}
+        \end{center}
+        \quotation
+        \endquotation
+}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+% Make up the title page.
+\begin{titlepage}
+\begin{center}
+        \vfill
+        \Large
+        Electronics and Computer Science\\
+        Faculty of Physical Sciences and Engineering\\
+        University of Southampton
+        \vfill
+        \huge
+        \textbf{\docAuthor{}}\\
+        \Large
+        \today
+        \vfill
+        \Huge
+        \textbf{\docSubtitle{}}
+        \vfill
+        \Large
+        Project Supervisor: \docSupervisor{}\\
+        Second Examiner: \docSecondExaminer{}
+        \vfill
+        A Project Report Submitted for the Award of\\\docDegree{}
+        \vspace{12mm}
+\end{center}
+\end{titlepage}
+
+\include{abstract}
+
+\tableofcontents
+
+\chapter{Acknowledgements}
+\input{acknowledgements}
+
+\mainmatter
+\input{intro}
+\input{lit-review}
+\input{implementation}
+\input{testing}
+\input{management}
+\input{conclusions}
+
+\appendix
+\appendixpage
+\addappheadtotoc
+\input{archive-tree}
+
+\backmatter
+
+% Citing Stuff
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,report}
+
+\end{document}
+

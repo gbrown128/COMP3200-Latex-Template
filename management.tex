@@ -1,0 +1,26 @@
+\chapter{Project Management}
+
+How I made sure I did it, and some Gantt charts to prove it.
+
+\section{Gantt Charts}
+
+\begin{figure}[H]
+    \centering
+    \begin{ganttchart}{1}{14}
+            \gantttitle{Semester 2}{14} \\
+            \gantttitlelist{18,...,31}{1} \\
+            \ganttbar{Digital Section Schematic Capture}{1}{1}\\
+            \ganttbar{PCB Layout}{2}{2}\\
+            \ganttmilestone{PCB Ordered}{2}\\
+            \ganttbar{Signal Processing Software Development}{3}{4}\\
+            \ganttbar{PCB Assembly and Bring-Up}{5}{5}\\
+            \ganttbar{ADC Interface Software}{6}{6}\\
+            \ganttgroup{Easter Break}{6}{10}\\
+            \ganttbar{Direction Finding Algorithm}{7}{7}\\
+            \ganttbar{GPS Interface and Triangulation}{8}{8}\\
+            \ganttbar{Additional Software Features}{9}{12}\\
+            \ganttbar{Final Report}{9}{14}\\
+            \ganttmilestone{Final Report Submission}{14}
+    \end{ganttchart}
+    \caption{\label{fig:gantt-sem2-plan}Planned Work for Semester 2}
+\end{figure}
